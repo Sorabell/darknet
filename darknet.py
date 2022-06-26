@@ -12,6 +12,9 @@ from ctypes import *
 import math
 import random
 import os
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 
 class BOX(Structure):

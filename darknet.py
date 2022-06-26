@@ -98,9 +98,9 @@ def load_network(config_file, data_file, weights, batch_size=1):
         class_colors
     """
     network = load_net_custom(
-        config_file.encode("ascii"),
-        weights.encode("ascii"), 0, batch_size)
-    metadata = load_meta(data_file.encode("ascii"))
+        config_file.decode("ascii"),
+        weights.decode("ascii"), 0, batch_size)
+    metadata = load_meta(data_file.decode("ascii"))
     class_names = [metadata.names[i].decode("ascii") for i in range(metadata.classes)]
     colors = class_colors(class_names)
     return network, class_names, colors
